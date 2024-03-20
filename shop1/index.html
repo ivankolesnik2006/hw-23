@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="js/data.js"></script>
+  <script src="js/functions.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="categories"></div>
+    <div id="products"></div>
+    <div id="product"></div>
+  </div>
+  <div id="info"></div>
+  <div id="orderForm" style="display: none;">
+    <h2>Форма оформлення замовлення</h2>
+    <form id="checkoutForm">
+      <label for="fullName">ПІБ покупця:</label><br>
+      <input type="text" id="fullName" required><br>
+
+      <label for="city">Місто:</label><br>
+      <select id="city" required>
+        <option value="">Оберіть місто</option>
+        <option value="Київ">Київ</option>
+        <option value="Луганськ">Луганськ</option>
+        <option value="Одеса">Одеса</option>
+        <option value="Харків">Харків</option>
+      </select><br>
+
+      <label for="postOffice">Склад Нової пошти:</label><br>
+      <input type="text" id="postOffice" required><br>
+
+      <label for="paymentMethod">Спосіб оплати:</label><br>
+      <select id="paymentMethod" required>
+        <option value="">Оберіть спосіб оплати</option>
+        <option value="Післяплата">Післяплата</option>
+        <option value="Оплата банківською карткою">Оплата банківською карткою</option>
+      </select><br>
+
+      <label for="quantity">Кількість:</label><br>
+      <input type="number" id="quantity" min="1" required><br>
+
+      <label for="comment">Коментар до замовлення:</label><br>
+      <textarea id="comment"></textarea><br>
+
+      <button type="submit">Підтвердити замовлення</button>
+    </form>
+  </div>
+
+  <button id="buyButton" style="display: none;">Купити</button>
+  <button onclick="showMyOrders()">Мої замовлення</button>
+</body>
+</html>
